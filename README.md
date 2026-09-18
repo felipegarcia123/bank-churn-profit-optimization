@@ -124,4 +124,4 @@ Al modificar módulos Python, reinicia el servidor con Ctrl+C y `streamlit run a
 - El modelo incluye geografía y género. No se ha completado una evaluación de equidad para uso operativo.
 - La app es local, sin autenticación ni controles para una base real en producción.
 
-[Ver caso de estudio para portafolio](docs/PORTFOLIO.md) · [Preparar la publicación](docs/PUBLISHING.md)
+
