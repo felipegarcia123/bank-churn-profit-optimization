@@ -1,0 +1,105 @@
+{
+  "artifact_version": 2,
+  "created_at_utc": "2026-09-18T22:32:33.713381+00:00",
+  "dataset_sha256": "3996cd1fa372e0db0cd9c0ebac35bbd4e8e3c65fb942bb010c826e7b1eeef0a0",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.2",
+    "joblib": "1.6.0"
+  },
+  "split_sizes": {
+    "train": 6000,
+    "validation": 2000,
+    "test": 2000
+  },
+  "random_state": 42,
+  "policy": "positive_expected_incremental_profit",
+  "economic_config": {
+    "retention_cost": 15.0,
+    "retention_success_rate": 0.3,
+    "currency": "USD"
+  },
+  "model": "xgboost",
+  "validation_results": [
+    {
+      "model": "logistic_regression",
+      "roc_auc": 0.7567922313685025,
+      "average_precision": 0.465394656217731,
+      "brier_score": 0.13677691270839062,
+      "f1_at_0.5": 0.3132969034608379,
+      "net_profit": 264459.804,
+      "contacted": 1382
+    },
+    {
+      "model": "random_forest",
+      "roc_auc": 0.8569833315596027,
+      "average_precision": 0.6670285513953513,
+      "brier_score": 0.10553659727322111,
+      "f1_at_0.5": 0.5723172628304821,
+      "net_profit": 266364.804,
+      "contacted": 1356
+    },
+    {
+      "model": "xgboost",
+      "roc_auc": 0.8541823796061084,
+      "average_precision": 0.6864989649526858,
+      "brier_score": 0.10461252380130957,
+      "f1_at_0.5": 0.5709828393135725,
+      "net_profit": 266418.804,
+      "contacted": 1357
+    }
+  ],
+  "test_metrics": {
+    "roc_auc": 0.8545309562258716,
+    "average_precision": 0.6981994557758271,
+    "brier_score": 0.10405236318704086,
+    "f1_at_0.5": 0.5741029641185648
+  },
+  "test_breakdown": {
+    "threshold": null,
+    "tp": 359,
+    "fp": 1011,
+    "fn": 48,
+    "tn": 582,
+    "contacted": 1370,
+    "revenue_saved": 298582.866,
+    "campaign_cost": 20550.0,
+    "revenue_lost_fn": 10150.0,
+    "net_profit": 278032.866,
+    "roi": 13.529579854014598
+  },
+  "test_scenarios": [
+    {
+      "scenario": "No actuar",
+      "contacted": 0,
+      "campaign_cost_usd": 0.0,
+      "net_profit_vs_status_quo_usd": 0.0,
+      "remaining_revenue_at_risk_usd": 1005426.22
+    },
+    {
+      "scenario": "Llamar a todos",
+      "contacted": 2000,
+      "campaign_cost_usd": 30000.0,
+      "net_profit_vs_status_quo_usd": 271627.866,
+      "remaining_revenue_at_risk_usd": 703798.354
+    },
+    {
+      "scenario": "Azar: misma cobertura (esperanza)",
+      "contacted": 1370,
+      "campaign_cost_usd": 20550.0,
+      "net_profit_vs_status_quo_usd": 186065.08821,
+      "remaining_revenue_at_risk_usd": 798811.13179
+    },
+    {
+      "scenario": "Modelo: política económica",
+      "contacted": 1370,
+      "campaign_cost_usd": 20550.0,
+      "net_profit_vs_status_quo_usd": 278032.866,
+      "remaining_revenue_at_risk_usd": 706843.354
+    }
+  ],
+  "uplift_vs_call_everyone": 6405.0,
+  "uplift_vs_random": 91967.77779
+}

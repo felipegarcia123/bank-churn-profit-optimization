@@ -1,0 +1,37 @@
+# Python y entornos
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Datos y artefactos locales: no publicar identificadores ni binarios
+models/*.pkl
+models/*.joblib
+data/raw/*.csv
+data/processed/*.csv
+reports/*.csv
+reports/*.png
+reports/*.html
+
+# Herramientas
+.ipynb_checkpoints/
+.codegraph/
+.DS_Store
+.vscode/
+.idea/
+*.swp

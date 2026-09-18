@@ -1,0 +1,13 @@
+REPORTE DE EVALUACIÓN — TEST RESERVADO
+Beneficio incremental simulado; no representa ingresos observados de una campaña.
+Costo por contacto: 15.00 USD
+Éxito de retención supuesto: 30%
+Política: probabilidad calibrada × ingreso anual × éxito > costo
+Clientes contactados: 1,370
+TP: 359 | FP: 1011 | FN: 48 | TN: 582
+Ingreso anual preservado (simulado): 298,582.87 USD
+Costo de campaña: 20,550.00 USD
+Beneficio incremental: 278,032.87 USD
+ROI incremental: 1353.0%
+Mejora vs. llamar a todos: 6,405.00 USD
+Mejora vs. azar (esperanza): 91,967.78 USD
